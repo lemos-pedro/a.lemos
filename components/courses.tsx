@@ -1,70 +1,70 @@
 'use client';
 
-import { Award, Clock, Users } from 'lucide-react';
+import { Award, Calendar } from 'lucide-react';
 
 export function Courses() {
   const courses = [
     {
-      title: 'Advanced System Design',
-      provider: 'Coursera',
-      duration: '6 meses',
-      students: '500+',
-      description: 'Arquitetura de sistemas escaláveis e design patterns avançados.',
-      category: 'Backend',
+      title: 'PMI Kickoff',
+      provider: 'Project Management Institute (PMI)',
+      year: '2025',
+      description:
+        'Introdução aos fundamentos da gestão de projetos, papéis do gestor de projetos e ciclo de vida de projetos.',
+      category: 'Project Management',
     },
     {
-      title: 'React Performance Optimization',
-      provider: 'Udemy',
-      duration: '4 meses',
-      students: '1.2k',
-      description: 'Otimização de aplicações React, memoization, e code splitting.',
-      category: 'Frontend',
+      title: 'Gestão de Projetos',
+      provider: 'Fundação Bradesco',
+      year: '2025',
+      description:
+        'Planeamento, execução, monitoramento e encerramento de projetos utilizando boas práticas de gestão.',
+      category: 'Project Management',
     },
     {
-      title: 'Kubernetes in Production',
-      provider: 'Pluralsight',
-      duration: '3 meses',
-      students: '800+',
-      description: 'Deploy, scaling e gerenciamento de clusters Kubernetes.',
-      category: 'DevOps',
+      title: 'Gestão e Segurança da Informação',
+      provider: 'Fundação Bradesco',
+      year: '2025',
+      description:
+        'Princípios de segurança da informação, gestão de riscos e proteção de ativos digitais.',
+      category: 'Cybersecurity',
     },
     {
-      title: 'Machine Learning Fundamentals',
-      provider: 'Andrew Ng - Coursera',
-      duration: '5 meses',
-      students: '10k+',
-      description: 'Fundamentos de Machine Learning, redes neurais e TensorFlow.',
-      category: 'IA',
+      title: 'Lei Geral de Proteção de Dados (LGPD)',
+      provider: 'Fundação Bradesco',
+      year: '2025',
+      description:
+        'Fundamentos da LGPD, privacidade de dados e boas práticas de proteção de informações.',
+      category: 'Security',
     },
     {
-      title: 'Cloud Architecture AWS',
-      provider: 'A Cloud Guru',
-      duration: '4 meses',
-      students: '2k+',
-      description: 'AWS Solutions Architect, lambda, RDS, e EC2.',
-      category: 'Cloud',
+      title: 'Programação Web',
+      provider: 'Fundação Bradesco',
+      year: '2025',
+      description:
+        'Fundamentos do desenvolvimento web utilizando HTML, CSS e JavaScript.',
+      category: 'Web Development',
     },
     {
-      title: 'TypeScript Advanced Patterns',
-      provider: 'egghead.io',
-      duration: '2 meses',
-      students: '600+',
-      description: 'Padrões avançados de TypeScript e type-safe development.',
-      category: 'Frontend',
+      title: 'Programação Web',
+      provider: 'Microsoft',
+      year: '2025',
+      description:
+        'Introdução ao desenvolvimento de aplicações web modernas e tecnologias da plataforma Microsoft.',
+      category: 'Web Development',
     },
   ];
-
-  const categories = ['Backend', 'Frontend', 'DevOps', 'IA', 'Cloud'];
 
   return (
     <section id="cursos" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-balance mb-4">
-            Cursos &<span className="text-neon"> Certificações</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">
+            Cursos & <span className="text-neon">Certificações</span>
           </h2>
+
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Educação contínua em tecnologias atuais e tendências do mercado.
+            Formação complementar voltada para desenvolvimento de software,
+            gestão de projetos e segurança da informação.
           </p>
         </div>
 
@@ -72,31 +72,29 @@ export function Courses() {
           {courses.map((course, idx) => (
             <div
               key={idx}
-              className="border border-neon/20 rounded-lg p-6 bg-surface/30 hover:bg-surface/60 transition-all duration-300 hover:border-neon hover:glow-neon group"
+              className="border border-neon/20 rounded-lg p-6 bg-surface/30 hover:border-neon transition-all duration-300"
             >
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-primary/20 text-neon text-xs font-bold rounded-full mb-3">
+              <div className="flex items-center justify-between mb-4">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-neon">
                   {course.category}
                 </span>
-                <h3 className="text-xl font-bold text-foreground group-hover:text-neon transition-colors">
-                  {course.title}
-                </h3>
-                <p className="text-neon text-sm font-semibold mt-2">
-                  {course.provider}
-                </p>
+
+                <Award size={20} className="text-neon" />
               </div>
 
-              <p className="text-foreground/70 text-sm mb-4">{course.description}</p>
+              <h3 className="text-xl font-bold">{course.title}</h3>
 
-              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Clock size={16} className="text-neon" />
-                  <span className="text-xs">{course.duration}</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Users size={16} className="text-neon" />
-                  <span className="text-xs">{course.students}</span>
-                </div>
+              <p className="text-neon font-medium mt-1">
+                {course.provider}
+              </p>
+
+              <p className="text-sm text-muted-foreground mt-4">
+                {course.description}
+              </p>
+
+              <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground border-t border-border pt-4">
+                <Calendar size={16} className="text-neon" />
+                {course.year}
               </div>
             </div>
           ))}

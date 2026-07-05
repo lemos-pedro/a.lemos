@@ -10,7 +10,6 @@ export function Navbar() {
   const navItems = [
     { href: '#inicio', label: 'INÍCIO' },
     { href: '#projetos', label: 'PROJETOS' },
-    { href: '#experiencia', label: 'EXPERIÊNCIA' },
     { href: '#cursos', label: 'CURSOS' },
     { href: '#contratacoes', label: 'CONTRATAÇÕES' },
     { href: '#contato', label: 'CONTATO' },
@@ -42,10 +41,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Download CV Button */}
-          <button className="hidden md:inline-flex px-6 py-2 border border-neon text-neon text-sm font-bold rounded hover:bg-neon hover:text-background transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">
-            DOWNLOAD CV
-          </button>
+         
 
           {/* Mobile Menu Button */}
           <button

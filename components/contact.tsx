@@ -27,7 +27,7 @@ export function Contact() {
             <div className="space-y-4">
               {/* Email */}
               <a
-                href="mailto:contato@dev.com"
+                href="mailto:ariclene.lemos@outlook.com"
                 className="flex items-center gap-4 p-4 rounded-lg border border-neon/20 hover:border-neon hover:bg-primary/5 transition-all group"
               >
                 <div className="w-12 h-12 rounded bg-primary/20 border border-neon/50 flex items-center justify-center">
@@ -38,7 +38,7 @@ export function Contact() {
                     Email
                   </p>
                   <p className="font-bold text-foreground group-hover:text-neon transition-colors">
-                    contato@dev.com
+                    ariclene.lemos@outlook.com
                   </p>
                 </div>
               </a>
@@ -52,7 +52,7 @@ export function Contact() {
                   <p className="text-xs uppercase tracking-widest text-muted-foreground">
                     Localização
                   </p>
-                  <p className="font-bold text-foreground">Brazil, Brasil</p>
+                  <p className="font-bold text-foreground">Luanda,Angola</p>
                 </div>
               </div>
 
@@ -71,7 +71,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="font-bold text-neon hover:text-primary-light transition-colors"
                   >
-                    linkedin.com/in/seu-perfil
+                    linkedin.com/in/ariclene-lemos
                   </a>
                 </div>
               </div>

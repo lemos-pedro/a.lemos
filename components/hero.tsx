@@ -84,13 +84,11 @@ export function Hero() {
             <div className="absolute inset-2 border border-neon/20 rounded-2xl" />
 
             {/* Profile image area */}
-            <img 
-                src="/lee.png" 
-                alt="Seu Nome" 
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            </div>
+            <img
+              src="/lee.png"
+              alt="Seu Nome"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
